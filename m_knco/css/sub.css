@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* subvisual */
+#wrap{width: 100%;}
+#container{width: 100%;}
+
+div[class ^= "subvisual"]{position: relative;width:100%;background-size: cover;}
+div[class ^= "subvisual"] div{overflow: hidden; max-height: 300px;}
+div.subvisual2 div{max-height: 378px;}
+div[class ^= "subvisual"] img{width: 100%; height: 100%;}
+div[class ^= "subvisual"] h2{position: absolute;top: 50%;margin-top: -36px;width: 100%;font-size: 1.8rem;font-weight: 500;color: #fff;line-height: 32px;text-align: center;text-shadow: 2px 2px 4px #000;}
+div.subvisual2 h2, div.subvisual3 h2{margin-top: -57px;}/* (menu height + line-height)/2 */
+
+div[class ^= "subvisual"] .tab{position: absolute;bottom: 0;width: 100%;background-color: rgba(84, 169, 34, .7);}
+div[class ^= "subvisual"] .tab > div{display: table;table-layout: fixed;margin: 0 auto;width: calc(100% - 2px);border-top: 1px solid #fff;border-right: 1px solid #fff;}
+div[class ^= "subvisual"] .tab > div > div{display: table-row;}
+div[class ^= "subvisual"] .tab a{display: table-cell;width: auto;border-left: 1px solid #fff;font-size: 1.4rem;color: #fff;line-height: 40px;text-align: center;}
+div[class ^= "subvisual"] .tab > div > div:first-of-type a:not(.on){border-bottom: 1px solid #fff;}
+div[class ^= "subvisual"] a.on{color: #54a922; background-color: #fff;}
+
+/* sub1_2 경농소개 > 경영방침 */
+/* float */
+.policy .depth1 > li a:after{content:""; display: block; clear: both;}
+
+/* policy */
+.policy{box-sizing: border-box; margin: 0 auto;padding: 30px 16px;width: 100%;}
+.policy h3, .pest h3{margin-bottom: 18px;font-weight: 700;font-size: 1.6rem;text-align: center;}
+.policy .depth1{width: 100%;}
+.policy .depth1 > li{box-sizing: border-box;margin-top: 8px;padding: 16px 12px;width: 100%;border: 1px solid #9e9e9e;}
+.policy .depth1 > li:first-of-type{margin: 0;}
+.policy .depth1 > li a{display: block;width: 100%;height: 140px;}
+.policy .depth1 > li a span{float: left;width: 120px;border: 10px solid #9e9e9e;border-radius: 140px;}
+.policy .depth1 > li a.on span{border-color:#54a922;}
+.policy .depth1 > li a span img{display: block; width: 100%;}
+.policy .depth1 > li a span img:nth-of-type(2){display: none;}
+.policy .depth1 > li a.on span img{display: none;}
+.policy .depth1 > li a.on span img:nth-of-type(2){display: block;}
+.policy .depth1 > li a strong{float: left;margin-left: 20px;line-height: 140px;font-weight: 700;font-size: 1.7rem;}
+.policy .depth1 > li .depth2{display: none;margin-top: 12px;border-top: 1px solid #9e9e9e;font-size: 1.4rem;line-height: 22px;text-indent: 0;}
+.policy .depth1 > li:first-of-type .depth2{display: block;}
+.policy .depth1 > li:nth-of-type(n+2):nth-of-type(-n+4) .depth2{background-size: 50%; background-repeat: no-repeat; background-position: right bottom;}
+.policy .depth1 > li:nth-of-type(3) .depth2{background-image: url("/m_knco/images/sub1/bg_policy3.jpg");}
+.policy .depth1 > li:nth-of-type(4) .depth2{background-image: url("/m_knco/images/sub1/bg_policy4.jpg");}
+.policy .depth1 > li .depth2 span{font-weight: 700;color: #458c1c;line-height: 44px;height: 44px;}
+.policy .depth1 > li .depth2 span::before{content:"";display: block;float: left;margin: 14px 8px 14px 0;width: 2px;height: 14px;background-color: #458c1c;}
+.policy .depth1 > li .depth2 ul li::before{ content:""; display: block;float: left;margin: 9px 8px 9px 0;width: 2px;height: 2px;background-color: #222;}
+
+/* sub2_1 제품정보 > 작물보호제 */
+/* float */
+.protect .tabmenu::after, .protect ol::after, .protect .content .filter::after, .protect .content .page::after{content: ""; display: block; clear: both;}
+
+/* protect */
+.protect{padding: 30px 16px;}
+.protect .tabmenu {width: 100%;margin-bottom: 16px;text-align: center;font-size: 0;}
+.protect .tabmenu li{display: inline-block;margin-left: 16px;width: 96px;border-radius: 25px;font-weight: 400;font-size: 1.3rem;line-height: 30px;color: #222;text-align: center;background-color: #ebf5eb;cursor: pointer;}
+.protect .tabmenu li:first-of-type{margin: 0;}
+.protect .tabmenu li input, .protect .tabmenu li a{display: inline-block;border-radius: inherit;width: inherit; outline: 0;line-height: inherit;color: inherit;cursor: pointer;}
+.protect .tabmenu li.on {background-color: #0c6c37; color: #fff;}
+
+.protect u{float: left;font-size: 1.4rem;line-height: 24px;}
+.protect u span{color: #54a922;}
+.protect form{display: block;float: right;margin-bottom: 16px;}
+.protect form input{display: block;float: left;width: 160px;height: 22px;border: 1px solid #b5b5b5;border-right: none;font-size: 1.4rem;}
+.protect button{display: block;float: left;width: 24px;height: 24px;border: none;background-color: #54a922;}
+.protect button i{font-weight: 600;color: #fff;font-size: 1.2rem;}
+
+.protect ol{clear: both;}
+.protect ol li{float: left; margin-left: 16px; width: calc((100% - 32px)/3); text-align: center;}
+.protect ol li:nth-of-type(3n+1){margin-left: 0;}
+.protect ol li div{overflow: hidden;width: 100%;border: 1px solid #b5b5b5;cursor: pointer;}
+.protect ol li img{display: block;width: 100%;}
+.protect ol li a{display: block; margin-top: 10px; font-size: 1.5rem; line-height: 19px;}
+.protect ol li small{display: block;margin: 12px 0;height: 34px;font-size: 1.3rem;line-height: 17px;color: #7d7d7d; word-break: keep-all;cursor: pointer;}
+.protect ol li span{display: inline-block; margin-bottom: 16px;padding: 0 18px; border-radius: 12px;font-weight: 400;font-size: 1.1rem;line-height: 20px;color:#fff; background-color: #54a922;}
+
+.protect .content .filter{box-sizing: border-box;margin-bottom: 50px;padding: 16px;width: 100%;background-color: #ebf5eb;}
+.protect .content .filter div{margin-bottom: 16px;}
+.protect .content:nth-of-type(3) .filter div:first-of-type ul{height: 70px;}
+.protect .content .filter strong{display: block;font-weight: 700;font-size: 1.3rem;line-height: 24px;}
+.protect .content .filter i{color: #0c6c37;font-size: 1.7rem;line-height: 24px;}
+.protect .content .filter ul{overflow-y: auto;padding: 8px;height: 88px;font-size: 1.3rem;line-height: 24px;background-color: #fff;}
+.protect .content .filter ul input{display: none;}
+.protect .content .filter ul label{display: block; padding: 0 8px; cursor: pointer;transition: all 0.1s ease;}
+.protect .content .filter ul label:hover, .protect .content .filter ul li input:checked + label{color: #fff;background-color: #0c6c37;}
+
+.protect .content .filter button{display: block;float: right;width: 80px;height: 30px;border: none;font-weight: 400;font-size: 1.6rem;line-height: 30px;color: #fff;text-align: center;background-color: #b5b5b5;cursor: pointer;}
+.protect .content .filter button[type="submit"]{margin-left: 20px;background-color: #0c6c37;}
+.protect .content .filter button i{color: #fff; font-weight: 600; font-size: 1.6rem; line-height: 30px;}
+
+.protect .more{display: block;border: 1px solid #b5b5b5;font-size: 1.3rem;line-height: 32px;text-align: center;}
+
+/* sub3_1 영농정보 > 병해충정보 */
+/* float */
+.pest .forecast-img::after, .pest .product-inner::after{content: ""; display: block; clear: both;}
+
+/* pest */
+.pest {padding: 30px 16px;}
+.pest article{margin-top: 24px;}
+.pest article:first-of-type{margin: 0;}
+.pest h4{margin-bottom: 12px;border-radius: 8px;font-weight: 500;font-size: 1.5rem;line-height: 28px;text-align: center;color: #fff;background-color: #54a922;}
+.pest strong{display: block;font-weight: 700;font-size: 1.5rem;line-height: 37px;color: #458c1c;}
+.pest strong::before{content:"";display: block;float: left;margin: 12px 8px 12px 0;width: 2px;height: 12px;background-color: #54a922;}
+.pest strong.on::before{background-color: #007cb5;}
+.pest .forecast .forecast-img div{float: left;width: calc(50% - 8px);}
+.pest .forecast .forecast-img div:nth-of-type(2){float: right;}
+.pest .forecast img{display: block; width: 100%;}
+.pest .forecast p{clear: both;padding-top: 12px; font-weight: 500; font-size: 1.3rem; line-height: 17px;word-break: keep-all;}
+
+.pest .product{padding: 0;}
+.pest .product .product-inner{position: static;float: unset;margin: 0;width: 100%;border-radius: 0;}
+.pest .product .product-inner div{float: left;margin: 0;width: 109px;height: 109px;border: 1px solid #b5b5b5;border-radius: 0;cursor: pointer;}
+.pest .product .product-inner div img{display: block;}
+.pest .product a{position: static;display: block;padding-left: 16px;float: left;width: calc(100% - 128px);} 
+.pest .product a strong{font-size: 1.3rem; color: unset; line-height: 17px;}
+.pest .product a strong::before{display: none;}
+.pest .product s{display: block; font-weight: 700; font-size: 1.3rem;}
+.pest .product small{display: block;padding: 5px 0;font-size: 1.2rem;line-height: 16px;color: #7d7d7d;cursor: pointer;letter-spacing: -0.5px;}
+.pest .product span{position: static;margin: 0;display: block;width: 100px;border-radius: 9px;font-size: 1.2rem;line-height: 18px;text-align: center;color: #fff;background-color: #54a922;}
+.pest .product p{margin-top: 8px;padding-top: 3px;width: 100%;border-top: 1px solid #ccc;font-size: 1.2rem;color: #7d7d7d;line-height: 20px;}
+
+.pest .method p{margin: 12px 0;font-weight: 500;font-size: 1.3rem;line-height: 17px;word-break: keep-all;}    
+.pest .method p:first-of-type{margin-top: 0;}    
+
+/* media */
+@media screen and (max-width: 768px){
+	.policy .depth1 > li a{height: 70px;}
+	.policy .depth1 > li a span{width: 60px; border-width: 5px;}
+    .policy .depth1 > li a strong{margin-left: 10px;line-height: 70px;}
+    .protect ol li small{letter-spacing: -1.3px;}
+}
+@media screen and (max-width: 480px){
+    .protect ol li{width: calc(50% - 8px);}
+    .protect ol li:nth-of-type(2n+1){margin-left: 0;margin-right: 8px;}
+	.protect ol li:nth-of-type(2n){margin-left: 8px;}
+	.protect ol li small{letter-spacing: 0;}
+}
+@media screen and (max-width: 360px){
+	.protect .tabmenu li{width: calc((100% - 32px)/3);}
+}
+@media screen and (max-width: 320px){
+    .protect .content input{width: 120px;}
+}
