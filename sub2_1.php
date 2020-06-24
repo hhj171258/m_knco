@@ -40,7 +40,7 @@
 						<strong><i class="fas fa-leaf"></i> 작물 선택</strong>
 						<ul>
 							<?php
- 								include_once "include/host.inc";
+ 								include_once "/host/home1/hhj171258/html/m_knco/include/host.inc";
 
  								$advt = $_REQUEST["advt"];
 								$Rsearch2_type1 = $_REQUEST["Rsearch2_type1"];
@@ -63,7 +63,6 @@
  								}
 
 								
-
 								if($crop == "A" || $crop == "") echo "<li><input type='radio' name='crop' id='crop_A' checked value='A'><label for='crop_A'>전체</label></li>";
 								else echo "<li><input type='radio' name='crop' id='crop_A' value='A'><label for='crop_A'>전체</label></li>";
 
@@ -72,8 +71,8 @@
 								$result = mysqli_query($db, $sql);
 								while ($data = mysqli_fetch_array($result))
 								{
-									if($crop == $data[0]) echo "<li><input type='radio' name='crop' id='crop_$data[0]' value='$data[0]' checked><label for='crop_$data[0]'>$data[1]</lable></li>";
-									else echo "<li><input type='radio' name='crop' id='crop_$data[0]' value='$data[0]'><label for='crop_$data[0]'>$data[1]</lable></li>";
+									if($crop == $data[0]) echo "<li><input type='radio' name='crop' id='crop_$data[0]' value='$data[0]' checked><label for='crop_$data[0]'>$data[1]</label></li>";
+									else echo "<li><input type='radio' name='crop' id='crop_$data[0]' value='$data[0]'><label for='crop_$data[0]'>$data[1]</label></li>";
 								}
 							 ?>
 						</ul>
@@ -90,8 +89,8 @@
 								$result = mysqli_query($db, $sql);
 								while ($data = mysqli_fetch_array($result))
 								{
-									if($search2_type1 == $data[0]) echo "<li><input type='radio' name='search2_type1' id='search2_type1_$data[0]' value='$data[0]' checked><label for='search2_type1_$data[0]'>$data[1]</lable></li>";
-									else echo "<li><input type='radio' name='search2_type1' id='search2_type1_$data[0]' value='$data[0]'><label for='search2_type1_$data[0]'>$data[1]</lable></li>";
+									if($search2_type1 == $data[0]) echo "<li><input type='radio' name='search2_type1' id='search2_type1_$data[0]' value='$data[0]' checked><label for='search2_type1_$data[0]'>$data[1]</label></li>";
+									else echo "<li><input type='radio' name='search2_type1' id='search2_type1_$data[0]' value='$data[0]'><label for='search2_type1_$data[0]'>$data[1]</label></li>";
 								}
 							 ?>
 						</ul>
@@ -108,8 +107,8 @@
 								$result = mysqli_query($db, $sql);
 								while ($data = mysqli_fetch_array($result))
 								{
-									if($trgt == $data[0]) echo "<li><input type='radio' name='trgt' id='trgt_$data[0]' value='$data[0]' checked><label for='trgt_$data[0]'>$data[1]</lable></li>";
-									else echo "<li><input type='radio' name='trgt' id='trgt_$data[0]' value='$data[0]'><label for='trgt_$data[0]'>$data[1]</lable></li>";
+									if($trgt == $data[0]) echo "<li><input type='radio' name='trgt' id='trgt_$data[0]' value='$data[0]' checked><label for='trgt_$data[0]'>$data[1]</label></li>";
+									else echo "<li><input type='radio' name='trgt' id='trgt_$data[0]' value='$data[0]'><label for='trgt_$data[0]'>$data[1]</label></li>";
 								}
 							 ?>
 						</ul>
@@ -155,8 +154,8 @@
 								$result = mysqli_query($db, $sql);
 								while ($data = mysqli_fetch_array($result))
 								{
-									if($search3_type1 == $data[0]) echo "<li><input type='radio' name='search3_type1' id='search3_type1_$data[0]' value='$data[0]' checked><label for='search3_type1_$data[0]'>$data[1]</lable></li>";
-									else echo "<li><input type='radio' name='search3_type1' id='search3_type1_$data[0]' value='$data[0]'><label for='search3_type1_$data[0]'>$data[1]</lable></li>";
+									if($search3_type1 == $data[0]) echo "<li><input type='radio' name='search3_type1' id='search3_type1_$data[0]' value='$data[0]' checked><label for='search3_type1_$data[0]'>$data[1]</label></li>";
+									else echo "<li><input type='radio' name='search3_type1' id='search3_type1_$data[0]' value='$data[0]'><label for='search3_type1_$data[0]'>$data[1]</label></li>";
 								}
 							 ?>
 						</ul>
@@ -229,7 +228,6 @@
 	<footer id="footer"></footer>
 </div>
 <script src="/m_knco/script/sub.js"></script>
-</body>
 <script>
 	$('input[type="radio"]').on('click', function(){
 		var name = 'R' + this.name;
@@ -243,4 +241,5 @@
 		}); 
 	});
 </script>
+</body>
 </html>
