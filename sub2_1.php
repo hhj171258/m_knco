@@ -1,18 +1,7 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="format-detectoin" content="telephone=no, email=no, address=no">
-<link rel="stylesheet" href="/m_knco/css/reset.css?ver=1.0">
-<link rel="stylesheet" href="/m_knco/css/main.css?ver=1.0">
-<link rel="stylesheet" href="/m_knco/css/sub.css?ver=1.0">
-<link rel="stylesheet" href="/css/fontawesome/all.css?ver=1.0">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.0/css/swiper.min.css">
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.0/js/swiper.min.js"></script>
+<?php include '/host/home1/hhj171258/html/m_knco/include/head.inc'; ?>
 <title>작물보호제 | 경농 모바일</title>
 </head>
 <body>
@@ -25,7 +14,7 @@
 			<div class="tab">
 				<div>
 					<div>
-						<a href="/m_knco/sub2_1.php#tab1?advt=Y#tab1" class="on">작물보호제</a>
+						<a href="/m_knco/sub2_1.php?advt=Y#tab1" class="on">작물보호제</a>
 						<a href="#">작물영양제</a>
 					</div>	
 					<div>
@@ -51,7 +40,7 @@
 						<strong><i class="fas fa-leaf"></i> 작물 선택</strong>
 						<ul>
 							<?php
- 								include_once "include/head.inc";
+ 								include_once "include/host.inc";
 
  								$advt = $_REQUEST["advt"];
 								$Rsearch2_type1 = $_REQUEST["Rsearch2_type1"];
